@@ -1,0 +1,41 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: ZapHook Docs
+  structure:
+    - type: section
+      key: section-1
+      title: Documentação
+      path: documentation
+      description: ""
+      icon: book-blank
+      default: true
+      children:
+        - type: space
+          key: space-1
+          title: Documentação (PT)
+          path: documentation-pt
+          content:
+            directory: ./documentation/documentation-pt
+            language: pt-br
+        - type: space
+          key: space-3
+          title: Documentation (EN)
+          path: documentation-en
+          default: true
+          content:
+            directory: ./documentation/documentation-en
+            language: en
+    - type: section
+      key: section-2
+      title: Central de ajuda
+      path: central-de-ajuda
+      description: ""
+      icon: life-ring
+      children:
+        - type: space
+          key: space-2
+          title: Help Center
+          path: help-center
+          default: true
+          content:
+            directory: ./central-de-ajuda/help-center
