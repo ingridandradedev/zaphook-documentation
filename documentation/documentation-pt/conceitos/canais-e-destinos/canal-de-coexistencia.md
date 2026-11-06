@@ -28,7 +28,7 @@ No modo de coexistência, o fluxo de conexão e operação ocorre da seguinte fo
 Diferente do modelo tradicional, você não precisa configurar manualmente endpoints na Meta Developers — o ZapHook abstrai essa camada.&#x20;
 
 {% hint style="info" %}
-Configure seu primeiro canal de coexistência seguindo o [guia passo a passo](../../how-to/gerar-token-permanente-1.md).
+Configure seu primeiro canal de coexistência seguindo o [guia passo a passo](../../how-to/gerar-token-permanente.md).
 {% endhint %}
 
 ***

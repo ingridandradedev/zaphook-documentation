@@ -106,7 +106,7 @@ O ZapHook cuida automaticamente de:
 * Assinaturas de eventos
 
 {% hint style="info" %}
-&#x20;Para instruções detalhadas, consulte o[ guia completo de conexão](../how-to/gerar-token-permanente-1.md)
+&#x20;Para instruções detalhadas, consulte o[ guia completo de conexão](../how-to/gerar-token-permanente.md)
 {% endhint %}
 
 **Resultado esperado**:\

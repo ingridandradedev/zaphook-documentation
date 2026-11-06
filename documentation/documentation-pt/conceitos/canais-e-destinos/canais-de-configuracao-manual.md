@@ -25,7 +25,7 @@ No setup manual, o fluxo de configuração e operação ocorre da seguinte forma
 Nesse modelo, o ZapHook entra após a configuração inicial, atuando como intermediário entre a Meta e sua aplicação.
 
 {% hint style="info" %}
-Configure seu primeiro canal de coexistência seguindo o [guia passo a passo](../../how-to/gerar-token-permanente-1.md).
+Configure seu primeiro canal de coexistência seguindo o [guia passo a passo](../../how-to/gerar-token-permanente.md).
 {% endhint %}
 
 ***

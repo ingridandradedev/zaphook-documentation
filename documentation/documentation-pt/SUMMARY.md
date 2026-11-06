@@ -17,8 +17,8 @@
 
 ## How to
 
-* [Como criar uma API para receber eventos do WhatsApp no ZapHook](how-to/gerar-token-permanente.md)
-* [Conectando seu WhatsApp via coexistência no ZapHook (Guia de integração)](how-to/gerar-token-permanente-1.md)
+* [Como criar uma API para receber eventos do WhatsApp no ZapHook](how-to/criar-uma-api-para-receber-eventos-do-whatsapp.md)
+* [Conectando seu WhatsApp via coexistência no ZapHook (Guia de integração)](how-to/gerar-token-permanente.md)
 
 ***
 
