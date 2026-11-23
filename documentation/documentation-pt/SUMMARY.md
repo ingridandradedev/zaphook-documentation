@@ -18,6 +18,7 @@
 ## How to
 
 * [Como criar uma API para receber eventos do WhatsApp no ZapHook](how-to/criar-uma-api-para-receber-eventos-do-whatsapp.md)
+* [Como processar eventos de mensagens enviadas pelo app do WhatsApp Business](how-to/receba-no-zaphook-as-mensagens-que-sua-empresa-envia-pelo-app.md)
 * [Conectando seu WhatsApp via coexistência no ZapHook (Guia de integração)](how-to/gerar-token-permanente.md)
 
 ***
@@ -38,10 +39,10 @@
 
 * [Gerando uma API Key no ZapHook](api-reference/gerando-uma-api-key-no-zaphook.md)
 * ```yaml
-  type: builtin:openapi
   props:
     models: true
     downloadLink: true
+  type: builtin:openapi
   dependencies:
     spec:
       ref:
