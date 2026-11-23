@@ -71,9 +71,9 @@ Agora, vamos apontar o WhatsApp para o seu Langflow.
 
 ***
 
-### Passo 3: Mapeamento de dados&#x20;
+### Passo 3: Mapeamento de dados
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 O Langflow precisa receber os dados de forma limpa para facilitar o uso dentro dos Prompts. Vamos transformar o JSON complexo do WhatsApp em algo simples.
 

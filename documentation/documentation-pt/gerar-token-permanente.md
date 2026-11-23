@@ -56,7 +56,7 @@ Diferente de tokens temporários (que expiram em 24h), utilizaremos um Usuário 
 
 #### Passo 3: Conectar seu App (Ativos)
 
-<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 O usuário criado precisa de permissão para mexer no seu App do WhatsApp.
 
@@ -88,7 +88,7 @@ Agora vamos gerar a chave que você colocará no ZapHook.
     * `whatsapp_business_messaging`
 5. Clique no botão Gerar token.
 
-<figure><img src=".gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 #### Passo 5: Copiar e Salvar
 
@@ -111,7 +111,6 @@ O token aparecerá na sua tela (uma sequência longa de letras e números).
 
     Certifique-se de que o usuário de sistema criado também tem acesso à Conta do WhatsApp (WABA). Se necessário, vá em Contas > Contas do WhatsApp, clique em Adicionar Pessoas e adicione o usuário de sistema que você criou.
 
-### Referências&#x20;
+### Referências
 
 * [Meta for Developers: Adquirir Token de Acesso usando Usuário do Sistema](https://developers.facebook.com/docs/whatsapp/business-management-api/get-started#1--acquire-an-access-token-using-a-system-user-or-facebook-login)
-

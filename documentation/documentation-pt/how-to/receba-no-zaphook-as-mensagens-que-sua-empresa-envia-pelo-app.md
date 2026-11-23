@@ -55,6 +55,8 @@ Não é preciso configurar nada na Meta. Basta ter um canal de coexistência ati
 
 Cada destino decide, pelo **Filtro de eventos**, quais eventos recebe. Sem filtro, o destino recebe tudo, inclusive as mensagens enviadas pelo app.
 
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
 Para escolher o que o destino recebe:
 
 1. Vá em **Destinos** e abra o destino desejado.
@@ -181,7 +183,9 @@ Se o seu destino usa **payload bruto** (`raw_payload`), você recebe exatamente 
 
 ***
 
-### Usando no mapeamento de campos
+### Usando no mapeamento de campos da configuração de destino
+
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 Exemplo para um CRM que registra tudo o que a empresa envia:
 
