@@ -55,7 +55,7 @@ Não é preciso configurar nada na Meta. Basta ter um canal de coexistência ati
 
 Cada destino decide, pelo **Filtro de eventos**, quais eventos recebe. Sem filtro, o destino recebe tudo, inclusive as mensagens enviadas pelo app.
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
 Para escolher o que o destino recebe:
 
@@ -67,29 +67,11 @@ Para escolher o que o destino recebe:
    * **Receber somente os selecionados**: marque **"Mensagens enviadas pelo celular"** junto com os outros tipos que você quiser.
 4. Salve.
 
-#### Pela API
-
-O filtro é o campo `event_filter` do destino:
-
-```http
-PUT /api/v1/coexistence/destinations/{destination_id}
-```
-
-```json
-{ "event_filter": {} }
-```
-
-* `{}` faz o destino receber tudo.
-* `{"exclude_types": ["smb_message_echoes"]}` bloqueia só esse evento.
-* `{"event_types": ["text", "smb_message_echoes"]}` recebe somente esses tipos.
-
-A lista oficial de valores aceitos está em `GET /api/v1/coexistence/event-types`.
-
 ***
 
 ### Como o evento chega
 
-No Monitoramento e no `event_filter`, o evento aparece como `smb_message_echoes`. Dentro do payload normalizado, ele chega assim:
+No Monitoramento e no filtro de eventos, o evento aparece como `smb_message_echoes`. Dentro do payload normalizado, ele chega assim:
 
 | Campo            | Valor                                                                                                              |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -99,21 +81,21 @@ No Monitoramento e no `event_filter`, o evento aparece como `smb_message_echoes`
 
 #### Quem é quem
 
-Em um echo, **quem enviou foi a sua empresa**. Por isso o remetente é o seu número, e o cliente é o destinatário.
+Em um echo, **quem enviou foi a sua empresa**. Por isso o remetente é o seu número.
 
-| Placeholder                | Mensagem recebida do cliente | Mensagem enviada pelo app (echo) |
-| -------------------------- | ---------------------------- | -------------------------------- |
-| `{{event_category}}`       | `message`                    | `message_echo`                   |
-| `{{event_type}}`           | tipo da mensagem (`text`...) | tipo da mensagem (`text`...)     |
-| `{{data.direction}}`       | `inbound`                    | `outbound`                       |
-| `{{data.sender_phone}}`    | telefone do cliente          | **número da empresa**            |
-| `{{data.sender_wa_id}}`    | wa\_id do cliente            | **número da empresa**            |
-| `{{data.sender_name}}`     | nome do perfil do cliente    | **nome do canal no ZapHook**     |
-| `{{data.recipient_phone}}` | não existe                   | **telefone do cliente**          |
-| `{{data.text_body}}`       | texto                        | texto                            |
-| `{{data.message_wamid}}`   | id da mensagem               | id da mensagem                   |
+| Placeholder                | Mensagem recebida do cliente | Mensagem enviada pelo app (echo)               |
+| -------------------------- | ---------------------------- | ---------------------------------------------- |
+| `{{event_category}}`       | `message`                    | `message_echo`                                 |
+| `{{event_type}}`           | tipo da mensagem (`text`...) | tipo da mensagem (`text`...)                   |
+| `{{data.direction}}`       | `inbound`                    | `outbound`                                     |
+| `{{data.sender_phone}}`    | telefone do cliente          | **número da empresa**                          |
+| `{{data.sender_wa_id}}`    | wa\_id do cliente            | **número da empresa**                          |
+| `{{data.sender_name}}`     | nome do perfil do cliente    | **nome do canal no ZapHook**                   |
+| `{{data.recipient_phone}}` | não se aplica                | **telefone do cliente que recebeu a mensagem** |
+| `{{data.text_body}}`       | texto                        | texto                                          |
+| `{{data.message_wamid}}`   | id da mensagem               | id da mensagem                                 |
 
-> **Atenção:** se o seu mapeamento usa `{{data.sender_phone}}` como "telefone do contato", nos echoes ele recebe o **número da empresa**. Para esse caso, use `{{data.recipient_phone}}`, que é o telefone do cliente.
+Os campos disponíveis para o mapeamento aparecem no painel **Placeholders disponíveis**, na aba **Mapeamento de campos** do destino.
 
 #### Exemplo de payload normalizado
 
@@ -183,9 +165,9 @@ Se o seu destino usa **payload bruto** (`raw_payload`), você recebe exatamente 
 
 ***
 
-### Usando no mapeamento de campos da configuração de destino
+### Usando no mapeamento de campos
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 Exemplo para um CRM que registra tudo o que a empresa envia:
 
@@ -211,8 +193,6 @@ Para receber mensagens dos clientes e mensagens enviadas pelo app no mesmo desti
   "event_category": "{{event_category}}"
 }
 ```
-
-Os placeholders disponíveis estão em `GET /api/v1/placeholders?event_category=message_echo`.
 
 ***
 
